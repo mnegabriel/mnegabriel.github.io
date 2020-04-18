@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="120">
     <!-- navBar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -41,7 +41,7 @@
             <h1 class="display-2">Full Stack Con</h1>
             <p class="lead">A One-day conference about all things JavaScript.</p>
             <div class="btn-group" role="group" aria-label="Callout Button">
-                <button type="button" class="btn btn-primary btn-lg">Register now!</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Register now!</button>
                 <a class="btn btn-light btn-lg" href="#speakers">Speakers</a>
             </div>
         </div>
@@ -153,6 +153,8 @@
 
 
         <!-- schedule -->
+        <h1 class="display-4 text-center my-5 text-muted" id="schedule">Schedule</h1>
+
         <ul class="list-group">
             <li class="list-group-item">
                 <div class="d-flex justify-content-between">
@@ -208,7 +210,7 @@
 
 
         <!-- callout -->
-        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out, register now!</button>
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't miss out, register now!</button>
         <!-- /callout -->
 
         <!-- signup form -->
@@ -223,8 +225,8 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Email">
                     <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">Sign up</button>
-      </span>
+                        <button class="btn btn-primary" type="button" >Sign up</button>
+                    </span>
                 </div>
             </div>
         </div>
@@ -235,15 +237,16 @@
         <div class="row py-3">
             <div class="col-md-7">
                 <ul class="nav">
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Commuity</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tracks</a>
                     </li>
-                    <li class="nav-item">
 
-                        <!-- Example split danger button -->
+                    <li class="nav-item">
                         <div class="btn-group dropup">
                             <button type="button" class="btn btn-outline-secondary">Other Confs</button>
                             <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -256,8 +259,8 @@
                                 <a class="dropdown-item" href="#">Swift conf</a>
                             </div>
                         </div>
-
                     </li>
+
                 </ul>
             </div>
             <div class="col-md text-md-right">
@@ -268,6 +271,33 @@
 
     </div>
     <!-- /container -->
+
+    <!--=====================================
+     FORM MODAL
+    =====================================-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register for Full Stack Conf</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    form goes here ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /Modal -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
