@@ -1,0 +1,28 @@
+//----------------------
+//-----Card Decks----------
+//----------------------
+.cardDeck {
+    &1,
+    &2 {
+        @extend .card-deck,
+        .mx-3,
+        .my-3;
+    }
+    &1 {
+        @include card-images(300px);
+    }
+    &2 {
+        @include card-images(200px);
+    }
+}
+
+.crdDckCard {
+    @extend .col-xl-3;
+    &>div {
+        @extend .card,
+        .p-0,
+        .border-0,
+        .my-3,
+        .text-center;
+    }
+}

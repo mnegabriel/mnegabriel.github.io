@@ -1,0 +1,19 @@
+//----------------------
+//-----Forth Row-----------
+//----------------------
+.forthRow {
+    @extend .row,
+    .justify-content-center,
+    .m-5;
+}
+
+.fthRHeader {
+    @extend .container,
+    .text-center;
+    color: white;
+    & h3 {
+        @extend .d-block;
+        font-weight: bold;
+        font-size: 40px;
+    }
+}

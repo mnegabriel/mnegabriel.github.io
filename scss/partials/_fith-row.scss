@@ -1,0 +1,35 @@
+.fithRow {
+    @extend .row,
+    .justify-content-center,
+    .px-5,
+    .py-5;
+    background-color: $col-masala;
+    color: white;
+}
+
+.focus {
+    &1,
+    &2,
+    &3 {
+        @extend .col-10,
+        .col-lg-4;
+        &>div {
+            @extend .media;
+        }
+    }
+}
+
+.media {
+    & .fas {
+        @extend .align-self-center;
+        font-size: 4rem;
+        padding: 0 30px;
+        color: $col-lima;
+    }
+    & h4 {
+        text-transform: uppercase;
+    }
+    & p {
+        opacity: 0.5;
+    }
+}

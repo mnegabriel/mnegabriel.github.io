@@ -1,2 +1,0 @@
-# bootstrap
-Learning Boostrap

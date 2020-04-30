@@ -1,0 +1,13 @@
+//----------------------
+//-----MIXIN-----------
+//----------------------
+@mixin card-images($h) {
+    @for $i from 1 through 8 {
+        .card-#{$i} {
+            height: $h; //300px
+            background: white url('../img/cards/card_#{$i}.jpg') no-repeat;
+            background-size: cover;
+            border-radius: 3px 3px 0 0;
+        }
+    }
+}
