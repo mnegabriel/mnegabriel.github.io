@@ -1,0 +1,56 @@
+    //----------------------
+    //-----Footer-----------
+    //----------------------
+    .mainFooter {
+        @extend //.sticky-bottom,
+        .pt-4,
+        .pl-5,
+        .d-none,
+        .d-lg-block,
+        .bg-white;
+    }
+    
+    .footer {
+        &Copy {
+            @extend .col;
+            &>div {
+                @extend .row,
+                .mb-3;
+            }
+            & a {
+                color: gray;
+                text-decoration: none;
+            }
+        }
+        &Categ {
+            @extend .col-xl-6,
+            .p-0;
+            & ul {
+                @extend .col-sm-12,
+                .col-xl-4;
+            }
+            .ftAbout {
+                @extend .col-xl-2,
+                .p-0;
+            }
+            & a {
+                color: gray;
+                text-decoration: none;
+            }
+        }
+        &Icons {
+            @extend .col,
+            .d-flex,
+            .justify-content-center;
+            &>a {
+                @extend .px-2;
+            }
+        }
+    }
+    
+    .ftAbout {
+        & a {
+            color: gray;
+            text-decoration: none;
+        }
+    }
